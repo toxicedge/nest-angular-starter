@@ -9,6 +9,12 @@
     "build": "npm run clean && npm run client:build && npm run server:build",
     "start": "node dist/server/main.js",
     "server:build": "npx nest build -p server/tsconfig.build.json",
+    "server:format": "prettier --write \"server/src/**/*.ts\" \"server/test/**/*.ts\"",
+    "server:start": "npx nest start --debug --watch",
+    "server:lint": "eslint server/{src,apps,libs,test}/**/*.ts --fix -c server/.eslintrc.js",
+    "server:test": "jest",
+    "server:test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "server:e2e": "jest --config ./server/test/jest-e2e.json",
     "client:build": "npx ng build",
     "client:start": "npx ng serve",
     "client:test": "npx ng test",
@@ -81,7 +87,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "rootDir": "server/src",
     "testRegex": ".spec.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
