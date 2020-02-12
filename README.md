@@ -1,6 +1,6 @@
 # Nestjs Server + Angular Client
 
-_A simple starter project that hosts a Angular Client on a Nestjs Server_
+_A simple starter project that hosts a static Angular Client app on a Nestjs Server_
 
 `npm run all`
 
@@ -11,5 +11,5 @@ _A simple starter project that hosts a Angular Client on a Nestjs Server_
 
 Common code shared between Client/Server should be placed in `./server/src/shared/`
 
-- Server-side code should access shared code using relative paths. E.g. `../../shared/shared.model`
-- Client code can access shared code using the `@shared` path alias. E.g. `@shared/shared.model`
+- Server-side code should access shared code using relative paths; E.g. `../../shared/shared.model`
+- Client code can access shared code using the `@shared` path alias; E.g. `@shared/shared.model`
