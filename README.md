@@ -13,3 +13,11 @@ Common code shared between Client/Server should be placed in `./server/src/share
 
 - Server-side code should access shared code using relative paths; E.g. `../../shared/shared.model`
 - Client code can access shared code using the `@shared` path alias; E.g. `@shared/shared.model`
+
+#### Socket
+
+Client/Server has been setup with basic socket.io boilerplate for your convenience!
+
+[Handy Socket Development Tool](https://amritb.github.io/socketio-client-tool)
+
+- Connect to your local running server with `ws://localhost:3000`

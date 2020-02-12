@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { ApiController } from './api/api.controller';
 import { AppService } from './services/app.service';
+import { ClientSocket } from './socket/client.socket';
 import { join } from 'path';
 
 @Module({
@@ -11,6 +12,6 @@ import { join } from 'path';
     }),
   ],
   controllers: [ApiController],
-  providers: [AppService],
+  providers: [AppService, ClientSocket],
 })
 export class AppModule {}
