@@ -8,8 +8,12 @@
     "clean": "rimraf dist",
     "build": "npm run clean && npm run client:build && npm run server:build",
     "start": "node dist/server/main.js",
-    "server:build": "nest build -p server/tsconfig.build.json",
-    "client:build": "ng build"
+    "server:build": "npx nest build -p server/tsconfig.build.json",
+    "client:build": "npx ng build",
+    "client:start": "npx ng serve",
+    "client:test": "npx ng test",
+    "client:lint": "npx ng lint",
+    "client:e2e": "npx ng e2e"
   },
   "author": "Chris Waymouth <chris@toxicedge.com>",
   "license": "ISC",
