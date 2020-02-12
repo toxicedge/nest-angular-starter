@@ -1,16 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { ApiController } from './api.controller';
-import { AppService } from './app.service';
+import { ApiController } from './api/api.controller';
+import { AppService } from './services/app.service';
 import { join } from 'path';
-
-const staticDir = join(process.cwd(), 'dist/client');
-console.log(`Static dir: ${staticDir}`);
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: staticDir,
+      rootPath: join(process.cwd(), 'dist/client'),
     }),
   ],
   controllers: [ApiController],
